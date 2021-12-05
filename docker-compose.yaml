@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  web:
+    image: smc181002/cms-web:0.1.1
+    build:
+      dockerfile: Dockerfile
+      context: ./cms
+    network_mode: host
+
+  api:
+    image: smc181002/cms-api:0.1.1
+    build:
+      dockerfile: Dockerfile
+      context: ./cms-api
+    network_mode: host
+
